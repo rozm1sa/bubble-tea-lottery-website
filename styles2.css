@@ -1,7 +1,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #f4f8fd;
-    color: #1f2d4a;
+    background-color: black; /* Dark background color */
+    color: #ffffff; /* White text color */
     margin: 0;
     padding: 0;
 }
@@ -20,40 +20,42 @@ body {
     margin-bottom: 20px;
 }
 
-button {
-    background-color: #28bad8;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 10px 0;
+.logo img {
+    max-width: 100%;
+    height: auto;
 }
 
-button:hover {
-    background-color: #009fe3;
+.button {
+    background-color: #7b84b8; /* Filled color */
+    border: 3px solid #6b4293; /* Border color */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
 }
+
+.button:hover {
+    background-color: #6b4293; /* Border color */
+    color: #ffffff; /* Text color */
+}
+
 
 .intro {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-.tea-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.tea-item {
-    margin: 10px;
-    text-align: center;
-}
-
-.tea-item img {
-    width: 100px;
-    height: 100px;
+form label {
+    text-align: left;
+    font-weight: bold;
+    display: block; /* Ensure each label is on a new line */
+    margin-top: 15px; /* Adjust the margin bottom to increase space between questions */
 }
 
 form {
@@ -62,44 +64,44 @@ form {
     align-items: center;
     margin-bottom: 20px;
 }
-
-form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
 form input[type="text"],
 form input[type="tel"],
 form input[type="date"] {
-    padding: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 10px;
+    border: 2px solid white; /* White border */
+    color: white; /* White text color */
+    background-color: transparent; /* Transparent background */
+    padding: 8px; /* Add padding for spacing */
+    transition: border-color 0.4s; /* Smooth transition for border color change */
 }
 
-form input[type="checkbox"] {
-    margin-right: 10px;
+form input[type="text"]:focus,
+form input[type="tel"]:focus,
+form input[type="date"]:focus {
+    border-color: #7b84b8; 
 }
 
-form button {
-    background-color: #f07f39;
-    margin-top: 20px;
+.carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(167, 161, 161, 0.995); /* Subtle box shadow */
+    padding: 20px; /* Add some padding for spacing */
+    
 }
 
-form button:hover {
-    background-color: #e83379;
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 400%; /* Make the carousel 2x wider */
+    
 }
 
-.social-networks {
-    margin: 20px 0;
+.carousel img {
+    width: calc(33.33% - 10px); /* Set the width of each image to one-third of the carousel container minus spacing */
+    height: calc(33.33% - 10px); /* Set the height of each image to maintain aspect ratio */
+    margin: 5px; /* Add some margin between images */
+    object-fit: cover; /* Crop the sides of the images to fit the square dimensions */
+    object-position: center; /* Center the cropped area */
+    display: inline-block;
 }
 
-.social-networks a {
-    color: #009fe3;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-networks a:hover {
-    color: #6b4293;
-}

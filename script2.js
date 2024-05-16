@@ -31,3 +31,6 @@ document.getElementById('lotteryForm').addEventListener('submit', function(e) {
     e.preventDefault();
     console.log('Form submitted!');
 });
+
+
+
