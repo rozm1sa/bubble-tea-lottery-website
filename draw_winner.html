@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Winner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Loterijas Uzvarētājs</h1>
+        <button id="drawButton">Izlozēt uzvarētāju</button>
+        <div id="winner"></div>
+    </div>
+    <script>
+        document.getElementById('drawButton').addEventListener('click', function() {
+            fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec?action=drawWinner')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        document.getElementById('winner').innerHTML = `Uzvarētājs: ${data.winner.vards} ${data.winner.uzvards}`;
+                    } else {
+                        document.getElementById('winner').innerHTML = 'Kļūda! Lūdzu mēģiniet vēlreiz.';
+                    }
+                });
+        });
+    </script>
+</body>
+</html>

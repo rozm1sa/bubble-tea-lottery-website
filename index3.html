@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Tea Lottery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Montserrat:wght@400;900&family=Roboto+Slab:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Bubble Tea Lottery</h1>
+        <button onclick="openRules()">Noteikumi</button>
+        <p class="intro">Laipni lūdzam mūsu loterijā! Aizpildiet anketu zemāk, lai piedalītos un laimētu lieliskas balvas.</p>
+        <div class="tea-gallery">
+            <div class="tea-carousel">
+                <div class="tea-carousel-inner">
+                    <div class="tea-item">
+                        <img src="tea1.png" alt="Tea 1">
+                        <p>Tea 1 - Composition</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="tea2.png" alt="Tea 2">
+                        <p>Tea 2 - Composition</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="tea3.png" alt="Tea 2">
+                        <p>Tea 3 - Composition</p>
+                    </div>
+                                        <div class="tea-item">
+                        <img src="tea7.png" alt="Tea 7">
+                        <p>Tea 7 - Composition</p>
+                    </div>
+                </div>
+            </div>
+            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+        <form id="lotteryForm">
+            <label for="vards">Vārds</label>
+            <input type="text" id="vards" name="vards" required>
+            <label for="uzvards">Uzvārds</label>
+            <input type="text" id="uzvards" name="uzvards" required>
+            <label for="epasts">E-pasts</label>
+            <input type="text" id="epasts" name="epasts" required>
+            <label for="tel">Tel. nr.</label>
+            <input type="tel" id="tel" name="tel" required>
+            <label for="checkNr">Čeka nr.</label>
+            <input type="text" id="checkNr" name="checkNr" required>
+            <label for="checkDate">Čeka datums</label>
+            <input type="date" id="checkDate" name="checkDate" required>
+            <label for="businessAddress">Tirdzniecības adrese uz čeka</label>
+            <input type="text" id="businessAddress" name="businessAddress" required>
+            <label>
+                <input type="checkbox" id="dataProcessing" name="dataProcessing"> Peikrītu datu apstrādei
+            </label>
+            <label>
+                <input type="checkbox" id="receiveNews" name="receiveNews"> Piekrītu saņemt jaunum
+            </label>
+            <button type="submit">Pieteikties loterijai</button>
+        </form>
+        <a href="home.html">Mājas lapa</a>
+        <div class="social-networks">
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+        </div>
+        <button onclick="openPrizeDescription()">Balvas apraksts</button>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>

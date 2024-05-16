@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Tea Lottery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Montserrat:wght@400;900&family=Roboto+Slab:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        .tea-gallery {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .tea-gallery-inner {
+            display: flex;
+            transition: transform 0.5s;
+        }
+        
+        .tea-item {
+            flex-shrink: 0;
+            width: calc(100% / 3);
+            transform: translateX(-50%);
+        }
+        
+        .tea-item img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .tea-gallery-button-prev, .tea-gallery-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        
+        .tea-gallery-button-prev {
+            left: 10px;
+        }
+        
+        .tea-gallery-button-next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Bubble Tea Lottery</h1>
+        <button onclick="openRules()">Noteikumi</button>
+        <p class="intro">Laipni lūdzam mūsu loterijā! Aizpildiet anketu zemāk, lai piedalītos un laimētu lieliskas balvas.</p>
+        <div class="tea-gallery">
+            <div class="tea-gallery-inner">
+                <div class="tea-item">
+                    <img src="tea1.png" alt="Tea 1">
+                    <p>Tea 1 - Composition</p>
+                </div>
+                <div class="tea-item">
+                    <img src="tea2.png" alt="Tea 2">
+                    <p>Tea 2 - Composition</p>
+                </div>
+                <div class="tea-item">
+                    <img src="tea3.png" alt="Tea 3">
+                    <p>Tea 3 - Composition</p>
+                </div>
+                <div class="tea-item">
+                    <img src="tea4.png" alt="Tea 4">
+                    <p>Tea 4 - Composition</p>
+                </div>
+                <div class="tea-item">
+                    <img src="tea5.png" alt="Tea 5">
+                    <p>Tea 5 - Composition</p>
+                </div>
+                <div class="tea-item">
+                    <img src="tea6.png" alt="Tea 6">
+                    <p>Tea 6 - Composition</p>
+                </div>
+                <div class="tea-item">
+                    <img src="tea7.png" alt="Tea 7">
+                    <p>Tea 7 - Composition</p>
+                </div>
+            </div>
+            <button class="tea-gallery-button-prev" onclick="prevTea()">&lt;</button>
+            <button class="tea-gallery-button-next" onclick="nextTea()">&gt;</button>
+        </div>
+        <!-- Rest of your code -->
+    </div>
+    <script>
+        let teaIndex = 0;
+        
+        function nextTea() {
+            if (teaIndex < 5) {
+                teaIndex++;
+                document.querySelector('.tea-gallery-inner').style.transform = `translateX(-${teaIndex * 33.3333}%)`;
+            }
+        }
+        
+        function prevTea() {
+            if (teaIndex > 0) {
+                teaIndex--;
+                document.querySelector('.tea-gallery-inner').style.transform = `translateX(-${teaIndex * 33.3333}%)`;
+            }
+        }
+    </script>
+</body>
+</html>

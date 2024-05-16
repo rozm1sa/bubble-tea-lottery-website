@@ -1,0 +1,105 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f8fd;
+    color: #1f2d4a;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #6b4293;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #28bad8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: #009fe3;
+}
+
+.intro {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tea-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tea-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.tea-item img {
+    width: 100px;
+    height: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="date"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form button {
+    background-color: #f07f39;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #e83379;
+}
+
+.social-networks {
+    margin: 20px 0;
+}
+
+.social-networks a {
+    color: #009fe3;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-networks a:hover {
+    color: #6b4293;
+}
