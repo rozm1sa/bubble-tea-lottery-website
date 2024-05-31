@@ -72,6 +72,8 @@ form input[type="date"] {
     background-color: transparent;
     padding: 8px;
     transition: border-color 0.4s;
+    width: 100%; /* Ensure all form inputs have the same width */
+    max-width: 400px;
 }
 
 form input[type="text"]:focus,
@@ -84,23 +86,25 @@ form input[type="date"]:focus {
     overflow-x: auto;
     white-space: nowrap;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(167, 161, 161, 0.995);
+    background-color: #1a1a1a;
+    border-radius: 8px;
     padding: 20px;
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
-    width: 300%; /* Reduced width to fit 3 images at a time */
+    width: 300%; /* Adjust width to fit the container */
 }
 
 .carousel img {
     width: calc(33.33% - 10px);
-    height: calc(50% - 10px); /* Set the height to half of the carousel container minus spacing */
+    height: auto;
     margin: 5px;
     object-fit: cover;
     object-position: center;
     display: inline-block;
+    border-radius: 8px;
 }
 
 /* Prize Section Styling */
@@ -118,7 +122,7 @@ form input[type="date"]:focus {
 .prize-image {
     flex: 1;
     min-width: 250px;
-    max-width: 400px;
+    max-width: 300px;
     padding: 10px;
 }
 
@@ -153,4 +157,30 @@ form input[type="date"]:focus {
 
 .prize-details a:hover {
     text-decoration: underline;
+}
+
+.social-networks a {
+    color: #7b84b8;
+    text-decoration: none;
+}
+
+.social-networks a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .prize-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .prize-image, .prize-details {
+        flex: none;
+        width: 100%;
+    }
+
+    .prize-image img {
+        margin-bottom: 20px;
+    }
 }
