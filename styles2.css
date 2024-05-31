@@ -179,22 +179,21 @@ form input[type="date"]:focus {
         width: 100%;
     }
 
+    .prize-image {
+        max-width: 150px;
+        margin-right: 20px;
+    }
+
     .prize-details {
         display: flex;
         flex-direction: column;
     }
 
-    .prize-image {
-        order: 2; /* Ensure the image comes second */
-    }
-
     .prize-details h2 {
-        order: 1; /* Ensure the h2 comes first */
-        margin-bottom: 10px;
+        order: -1;
     }
 
     .prize-details p {
-        order: 3; /* Ensure the paragraphs come after the image */
-        margin-left: 0; /* Reset margin for paragraphs */
+        margin-left: 170px; /* Adjust margin to create space beside the image */
     }
 }
