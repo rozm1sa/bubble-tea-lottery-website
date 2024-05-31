@@ -82,10 +82,6 @@ form input[type="date"]:focus {
     border-color: #7b84b8;
 }
 
-form input[type="date"] {
-    height: 40px; /* Ensure date input has the same height */
-}
-
 .carousel-container {
     overflow-x: auto;
     white-space: nowrap;
@@ -102,7 +98,7 @@ form input[type="date"] {
 }
 
 .carousel img {
-    width: calc(25% - 10px); /* Smaller images to fit 2-3 on screen */
+    width: calc(33.33% - 10px);
     height: auto;
     margin: 5px;
     object-fit: cover;
@@ -114,21 +110,20 @@ form input[type="date"] {
 /* Prize Section Styling */
 .prize-section {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 20px;
     background-color: #1a1a1a;
     margin-top: 20px;
     border-radius: 8px;
-    text-align: justify;
 }
 
 .prize-image {
-    width: 100%;
+    flex: 1;
+    min-width: 200px;
     max-width: 300px;
     padding: 10px;
-    order: 2;
 }
 
 .prize-image img {
@@ -138,23 +133,21 @@ form input[type="date"] {
 }
 
 .prize-details {
-    width: 100%;
+    flex: 2;
     padding: 20px;
+    text-align: left;
 }
 
 .prize-details h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     color: #7b84b8;
-    order: 1;
-    margin-bottom: 10px;
 }
 
 .prize-details p {
     font-size: 16px;
     line-height: 1.6;
     margin-top: 10px;
-    order: 3;
 }
 
 .prize-details a {
@@ -176,17 +169,32 @@ form input[type="date"] {
 }
 
 @media (max-width: 768px) {
-    .carousel img {
-        width: calc(33.33% - 10px); /* Smaller images to fit 2-3 on screen */
+    .prize-section {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
     }
 
-    form input[type="text"],
-    form input[type="tel"],
-    form input[type="date"] {
-        max-width: 90%; /* Smaller input boxes width-wise */
+    .prize-image, .prize-details {
+        width: 100%;
     }
 
     .prize-details {
-        text-align: justify; /* Align text to both sides */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prize-image {
+        order: 2; /* Ensure the image comes second */
+    }
+
+    .prize-details h2 {
+        order: 1; /* Ensure the h2 comes first */
+        margin-bottom: 10px;
+    }
+
+    .prize-details p {
+        order: 3; /* Ensure the paragraphs come after the image */
+        margin-left: 0; /* Reset margin for paragraphs */
     }
 }
