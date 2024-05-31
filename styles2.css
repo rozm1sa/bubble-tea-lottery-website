@@ -205,33 +205,23 @@ form input[type="date"]:focus {
 }
 
 
+/* Center content within the prize section on smaller screens */
 @media (max-width: 768px) {
     .prize-section {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .prize-image, .prize-details {
-        width: 100%;
-    }
-
-    .prize-image {
-        max-width: 150px;
-        margin-right: 20px;
+        text-align: center; /* Center text within the prize section */
     }
 
     .prize-details {
-        display: flex;
-        flex-direction: column;
+        order: 1; /* Move prize details below the image */
     }
 
     .prize-details h2 {
-        order: -1;
+        order: 0; /* Keep the heading on top */
+        margin-bottom: 10px; /* Add some space below the heading */
     }
 
-    .prize-details p {
-        margin-left: 170px; /* Adjust margin to create space beside the image */
+    .prize-image {
+        margin-bottom: 10px; /* Add space between the image and text */
     }
 }
 
@@ -240,13 +230,14 @@ form input[type="date"]:focus {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow logos to wrap to the next line on smaller screens */
 }
 
+
 .logo-mark {
-    max-width: 70px; /* Adjust as needed */
+    max-width: 100px; /* Adjust the size of the logo for smaller screens */
     height: auto;
-    margin-right: 30px; /* Adjust spacing between the logos */
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduce margin for better spacing on smaller screens */
 }
 
 .logo img {
