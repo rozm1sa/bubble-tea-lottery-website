@@ -121,7 +121,7 @@ form input[type="date"]:focus {
 
 .prize-image {
     flex: 1;
-    min-width: 250px;
+    min-width: 200px;
     max-width: 300px;
     padding: 10px;
 }
@@ -171,16 +171,30 @@ form input[type="date"]:focus {
 @media (max-width: 768px) {
     .prize-section {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .prize-image, .prize-details {
-        flex: none;
         width: 100%;
     }
 
-    .prize-image img {
-        margin-bottom: 20px;
+    .prize-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prize-image {
+        order: 2; /* Ensure the image comes second */
+    }
+
+    .prize-details h2 {
+        order: 1; /* Ensure the h2 comes first */
+        margin-bottom: 10px;
+    }
+
+    .prize-details p {
+        order: 3; /* Ensure the paragraphs come after the image */
+        margin-left: 0; /* Reset margin for paragraphs */
     }
 }
