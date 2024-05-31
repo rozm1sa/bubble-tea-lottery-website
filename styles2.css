@@ -1,10 +1,14 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
+    background-image: url('burbuli.png'); /* Set the background image */
+    background-repeat: repeat; /* Repeat the image both horizontally and vertically */
+    background-color: black; /* Fallback background color */
+    background-size: 1000px; /* Set the size of the background bubbles */
     color: #ffffff;
     margin: 0;
     padding: 0;
 }
+
 
 .container {
     max-width: 800px;
@@ -81,6 +85,9 @@ form input[type="tel"]:focus,
 form input[type="date"]:focus {
     border-color: #7b84b8;
 }
+
+
+
 
 .carousel-container {
     overflow-x: auto;
@@ -167,6 +174,36 @@ form input[type="date"]:focus {
 .social-networks a:hover {
     text-decoration: underline;
 }
+.form-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Style the form elements */
+#lotteryForm label {
+    color: #ffffff; /* White text color */
+}
+
+#lotteryForm input[type="text"],
+#lotteryForm input[type="tel"],
+#lotteryForm input[type="date"] {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 8px;
+    transition: border-color 0.4s;
+    width: 100%; /* Ensure all form inputs have the same width */
+    max-width: 400px;
+}
+
+#lotteryForm input[type="text"]:focus,
+#lotteryForm input[type="tel"]:focus,
+#lotteryForm input[type="date"]:focus {
+    border-color: #7b84b8;
+}
+
 
 @media (max-width: 768px) {
     .prize-section {
@@ -196,4 +233,23 @@ form input[type="date"]:focus {
     .prize-details p {
         margin-left: 170px; /* Adjust margin to create space beside the image */
     }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-mark {
+    max-width: 70px; /* Adjust as needed */
+    height: auto;
+    margin-right: 30px; /* Adjust spacing between the logos */
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 300px; /* Adjust as needed */
+    height: auto;
 }

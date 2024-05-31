@@ -9,8 +9,10 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="logo"><img src="hooligaan_logo.png" alt="Your Logo"></h1>
-        <!-- Prize Information Section -->
+        <div class="logo-container">
+            <img clas = "logo-mark" src="hooligaan_logo_mark.png" alt="Your Logo" class="logo-mark">
+            <h1 class="logo"><img src="hooligaan_logo.png" alt="Your Logo"></h1>
+        </div>        <!-- Prize Information Section -->
         <div class="prize-section">
             <div class="prize-image">
                 <img src="samsung_s24.png" alt="Samsung Galaxy S24 Ultra">
@@ -24,19 +26,24 @@
         </div>
         <br>
         <a href="noteikumi.pdf" class="button" target="_blank" download>Noteikumi</a>
-        <p class="intro">Iegādājies jebkuru no šiem 7 dzērieniem, aizpildi anketu zemāk un laimē!</p>
-        <div class="carousel-container">
-            <div class="carousel">
-                <img src="tea1.png" alt="Tea 1">
-                <img src="tea2.png" alt="Tea 2">
-                <img src="tea3.png" alt="Tea 3">
-                <img src="tea4.png" alt="Tea 4">
-                <img src="tea5.png" alt="Tea 5">
-                <img src="tea6.png" alt="Tea 6">
-                <img src="tea7.png" alt="Tea 7">
+        <div class="section-container">
+            <p class="intro">Iegādājies jebkuru no šiem 7 dzērieniem, aizpildi anketu zemāk un laimē!</p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <img src="tea1.png" alt="Tea 1">
+                    <img src="tea2.png" alt="Tea 2">
+                    <img src="tea3.png" alt="Tea 3">
+                    <img src="tea4.png" alt="Tea 4">
+                    <img src="tea5.png" alt="Tea 5">
+                    <img src="tea6.png" alt="Tea 6">
+                    <img src="tea7.png" alt="Tea 7">
+                </div>
             </div>
         </div>
+
+        
         <br>
+        <div class="form-container">
         <form id="lotteryForm">
             <label for="vards">Vārds</label>
             <input type="text" id="vards" name="vards" required>
@@ -61,6 +68,7 @@
             <br>
             <button class="button" type="submit">Pieteikties loterijai</button>
         </form>
+    </div>
         <a href="https://www.hooligaan.lv/">Mājas lapa</a>
         <div class="social-networks">
             <a href="https://www.instagram.com" target="_blank">Instagram</a>
