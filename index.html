@@ -10,8 +10,22 @@
 <body>
     <div class="container">
         <h1 class="logo"><img src="hooligaan_logo.png" alt="Your Logo"></h1>        
-        <a href="noteikumi.pdf" class="button" target="_blank" download>Noteikumi</a>
-        <p class="intro">Iegādājies jebkuru no šiem 7 dzērieniem un laimē!</p>
+                    <!-- Prize Information Section -->
+    <div class="prize-section">
+        <div class="prize-image">
+            <img src="samsung_s24.png" alt="Samsung Galaxy S24 Ultra">
+        </div>
+        <div class="prize-details">
+            <h2>Laimē Samsung Galaxy S24 Ultra!</h2>
+            <p>Jaunākajās Samsung Galaxy S sērijas ierīcēs iestrādāta virkne aizraujošu AI rīku un funkciju, kas uzlabo ikdienas saziņu, kā arī satura uzņemšanu un apstrādi. Ierīces izceļas arī ar uzlabotu veiktspēju, jaudīgu kameru sistēmu, kā arī dizainu.</p>
+            <p>Galaxy S24 Ultra ir pirmais Galaxy tālrunis, kuram ir titāna rāmis, kā arī Galaxy S24 Ultra viedtālruņu displejs ir izgatavots no jaunā Corning Gorilla Armor stikla materiāla.</p>
+            <p>Uzzini vairāk par Samsung Galaxy S24 Ultra <a href="https://www.samsung.com/lv/smartphones/galaxy-s24-ultra/" target="_blank">officiālajā mājaslapā</a>.</p>
+        </div>
+    </div>
+    <br>
+    <a href="noteikumi.pdf" class="button" target="_blank" download>Noteikumi</a>
+
+        <p class="intro">Iegādājies jebkuru no šiem 7 dzērieniem, aizpildi anketu zemāk un laimē!</p>
         <div class="carousel-container">
             <div class="carousel">
                 <img src="tea1.png" alt="Tea 1">
@@ -24,7 +38,6 @@
             </div>
         </div>
         <br>
-        <p> Aizpildiet anketu zemāk, lai piedalītos un laimētu lieliskas balvas!</p>
       
         <form id="lotteryForm">
             <label for="vards">Vārds</label>
@@ -42,13 +55,16 @@
             <label for="businessAddress">Tirdzniecības adrese uz čeka</label>
             <input type="text" id="businessAddress" name="businessAddress" required>
             <label>
-                <input type="checkbox" id="dataProcessing" name="dataProcessing"> Peikrītu datu apstrādei
+                <input type="checkbox" id="dataProcessing" name="dataProcessing"> Piekrītu datu apstrādei
             </label>
             <label>
-                <input type="checkbox" id="receiveNews" name="receiveNews"> Piekrītu saņemt jaunum
+                <input type="checkbox" id="receiveNews" name="receiveNews"> Piekrītu saņemt jaunumus
             </label>
+            <br>
             <button class="button"type="submit">Pieteikties loterijai</button>
         </form>
+
+
         <a href="https://www.hooligaan.lv/">Mājas lapa</a>
         <div class="social-networks">
             <a href="https://www.instagram.com" target="_blank">Instagram</a>

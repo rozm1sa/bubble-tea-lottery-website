@@ -1,7 +1,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: black; /* Dark background color */
-    color: #ffffff; /* White text color */
+    background-color: black;
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -26,8 +26,8 @@ body {
 }
 
 .button {
-    background-color: #7b84b8; /* Filled color */
-    border: 3px solid #6b4293; /* Border color */
+    background-color: #7b84b8;
+    border: 3px solid #6b4293;
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -37,14 +37,13 @@ body {
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;
 }
 
 .button:hover {
-    background-color: #6b4293; /* Border color */
-    color: #ffffff; /* Text color */
+    background-color: #6b4293;
+    color: #ffffff;
 }
-
 
 .intro {
     font-size: 18px;
@@ -54,8 +53,8 @@ body {
 form label {
     text-align: left;
     font-weight: bold;
-    display: block; /* Ensure each label is on a new line */
-    margin-top: 15px; /* Adjust the margin bottom to increase space between questions */
+    display: block;
+    margin-top: 15px;
 }
 
 form {
@@ -64,44 +63,94 @@ form {
     align-items: center;
     margin-bottom: 20px;
 }
+
 form input[type="text"],
 form input[type="tel"],
 form input[type="date"] {
-    border: 2px solid white; /* White border */
-    color: white; /* White text color */
-    background-color: transparent; /* Transparent background */
-    padding: 8px; /* Add padding for spacing */
-    transition: border-color 0.4s; /* Smooth transition for border color change */
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 8px;
+    transition: border-color 0.4s;
 }
 
 form input[type="text"]:focus,
 form input[type="tel"]:focus,
 form input[type="date"]:focus {
-    border-color: #7b84b8; 
+    border-color: #7b84b8;
 }
 
 .carousel-container {
     overflow-x: auto;
     white-space: nowrap;
     margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(167, 161, 161, 0.995); /* Subtle box shadow */
-    padding: 20px; /* Add some padding for spacing */
-    
+    box-shadow: 0px 0px 10px rgba(167, 161, 161, 0.995);
+    padding: 20px;
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
-    width: 400%; /* Make the carousel 2x wider */
-    
+    width: 300%; /* Reduced width to fit 3 images at a time */
 }
 
 .carousel img {
-    width: calc(33.33% - 10px); /* Set the width of each image to one-third of the carousel container minus spacing */
-    height: calc(33.33% - 10px); /* Set the height of each image to maintain aspect ratio */
-    margin: 5px; /* Add some margin between images */
-    object-fit: cover; /* Crop the sides of the images to fit the square dimensions */
-    object-position: center; /* Center the cropped area */
+    width: calc(33.33% - 10px);
+    height: calc(50% - 10px); /* Set the height to half of the carousel container minus spacing */
+    margin: 5px;
+    object-fit: cover;
+    object-position: center;
     display: inline-block;
 }
 
+/* Prize Section Styling */
+.prize-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.prize-image {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    padding: 10px;
+}
+
+.prize-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.prize-details {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+}
+
+.prize-details h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #7b84b8;
+}
+
+.prize-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.prize-details a {
+    color: #7b84b8;
+    text-decoration: none;
+}
+
+.prize-details a:hover {
+    text-decoration: underline;
+}
