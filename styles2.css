@@ -213,11 +213,13 @@ form input[type="date"]:focus {
 
     .prize-details {
         order: 1; /* Move prize details below the image */
+        text-align: center; /* Center text within the prize details on smaller screens */
     }
 
     .prize-details h2 {
         order: 0; /* Keep the heading on top */
         margin-bottom: 10px; /* Add some space below the heading */
+        text-align: center;
     }
 
     .prize-image {
