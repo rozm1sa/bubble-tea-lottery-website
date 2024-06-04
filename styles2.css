@@ -17,6 +17,13 @@ body {
     text-align: center;
 }
 
+.main{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-align: center;
+    
+}
+
 .title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
@@ -52,6 +59,7 @@ body {
 .intro {
     font-size: 18px;
     margin-bottom: 20px;
+    margin-top: 20px; /* Add margin to push the text closer to the carousel */
 }
 
 form label {
@@ -87,13 +95,10 @@ form input[type="date"]:focus {
 }
 
 
-
-
 .carousel-container {
-    overflow-x: auto;
-    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
     margin-bottom: 20px;
-    background-color: #1a1a1a;
     border-radius: 8px;
     padding: 20px;
 }
@@ -101,18 +106,72 @@ form input[type="date"]:focus {
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
-    width: 300%; /* Adjust width to fit the container */
 }
 
-.carousel img {
-    width: calc(33.33% - 10px);
-    height: auto;
-    margin: 5px;
-    object-fit: cover;
-    object-position: center;
-    display: inline-block;
-    border-radius: 8px;
+.carousel-item {
+    min-width: 25%; /* Display 4 cards at a time */
+    box-sizing: border-box;
+    padding: 10px;
 }
+
+.card {
+    background-color: #1a1a1a;    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-upper {
+    height: 200px; /* Adjust as needed */
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-upper img {
+    max-width: 100%;
+    max-height: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0; /* Add rounded corners only to top */
+    border-bottom-right-radius: 0; /* Add rounded corners only to top */
+}
+
+.card-lower {
+    padding: 20px;
+}
+
+.card-lower h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-lower p {
+    margin: 0;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.carousel-nav button {
+    background: none;
+    border: none;
+    font-size: 36px; /* Increased font size */
+    color: white;
+    cursor: pointer;
+}
+
+.carousel-nav button:hover {
+    color: #7b84b8;
+}
+
 
 /* Prize Section Styling */
 .prize-section {
@@ -233,14 +292,9 @@ form input[type="date"]:focus {
     justify-content: center;
     margin-bottom: 20px;
     flex-wrap: wrap; /* Allow logos to wrap to the next line on smaller screens */
+    background-color: #231F20;
 }
 
-
-.logo-mark {
-    max-width: 100px; /* Adjust the size of the logo for smaller screens */
-    height: auto;
-    margin-bottom: 10px; /* Reduce margin for better spacing on smaller screens */
-}
 
 .logo img {
     max-width: 300px; /* Adjust as needed */

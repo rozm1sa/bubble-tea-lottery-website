@@ -1,3 +1,31 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+
+    let scrollAmount = 0;
+    const scrollStep = document.querySelector('.carousel-item').offsetWidth;
+
+    nextButton.addEventListener('click', () => {
+        scrollAmount += scrollStep;
+        carousel.scrollTo({
+            top: 0,
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+
+    prevButton.addEventListener('click', () => {
+        scrollAmount -= scrollStep;
+        carousel.scrollTo({
+            top: 0,
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
 document.getElementById('lotteryForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
