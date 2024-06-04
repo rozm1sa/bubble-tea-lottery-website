@@ -300,3 +300,11 @@ form input[type="date"]:focus {
     max-width: 300px; /* Adjust as needed */
     height: auto;
 }
+.hooligaan-logo {
+    width: 20px; /* Adjust the width of the Hooligaan logo */
+}
+.social-networks img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
