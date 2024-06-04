@@ -11,7 +11,7 @@ body {
 
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
     padding: 20px;
     text-align: center;
@@ -22,13 +22,6 @@ body {
     font-weight: 900;
     text-align: center;
     
-}
-
-.title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    color: #6b4293;
-    margin-bottom: 20px;
 }
 
 .logo img {
@@ -180,7 +173,7 @@ form input[type="date"]:focus {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #1a1a1a;
+    background-color: #231F20;
     margin-top: 20px;
     border-radius: 8px;
 }
@@ -263,7 +256,128 @@ form input[type="date"]:focus {
     border-color: #7b84b8;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    line-height: 1.5;
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    display: block;
+}
+
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #7b84b8;
+    margin: 1rem 0;
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #7b84b8;
+}
+.product-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #6b4293;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link:hover{
+    opacity: 0.9;
+}
+
+
+.product-detail p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    font-size: 0.9rem;
+    margin: 20px 0; /* Increased margin for spacing */
+    text-align: left; /* Align list items to the left */
+}
+
+.product-detail ul li span{
+    font-weight: 400;
+}
+
+
+
+
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}
 /* Center content within the prize section on smaller screens */
 @media (max-width: 768px) {
     .prize-section {
