@@ -50,10 +50,20 @@ body {
 }
 
 .intro {
-    font-size: 18px;
+    font-size: 24px; /* Increase font size for better visibility */
     margin-bottom: 20px;
     margin-top: 20px; /* Add margin to push the text closer to the carousel */
+    color: #ffffff; /* Set text color to white */
+    position: relative; /* Set position relative to enable pseudo-elements */
+    text-shadow: 0 0 10px rgba(123, 132, 184, 0.8); /* Add a glowing effect directly to the text */
 }
+
+.intro::after {
+    content: " laimē!"; /* Append "laimē!" to the end of the text */
+    color: #7b84b8; /* Set color of "laimē!" to light purple */
+}
+
+
 
 form label {
     text-align: left;
@@ -226,12 +236,17 @@ form input[type="date"]:focus {
 .social-networks a:hover {
     text-decoration: underline;
 }
+
 .form-container {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    background-color: rgba(35, 31, 32, 0.8); /* Brown color with 80% opacity */
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-bottom: 20px;
+    max-width: calc(100% - 40px); /* Make the background slightly thinner */
+    margin-left: auto; /* Center the form container */
+    margin-right: auto; /* Center the form container */
 }
+
 
 /* Style the form elements */
 #lotteryForm label {
@@ -588,17 +603,20 @@ img{
     background-color: #231F20;
 }
 
-
-
 .logo img {
     max-width: 300px; /* Adjust as needed */
     height: auto;
 }
-.hooligaan-logo {
-    width: 20px; /* Adjust the width of the Hooligaan logo */
-}
-.social-networks img {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+
+.social-networks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+    background-color: #231F20;
 }
 
+.social-networks img {
+    width: 40px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
