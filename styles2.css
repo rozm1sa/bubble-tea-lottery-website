@@ -17,11 +17,11 @@ body {
     text-align: center;
 }
 
-.main{
+.main {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     text-align: center;
-    
+    text-decoration: underline; /* Add underline to the text */
 }
 
 .logo img {
@@ -619,4 +619,11 @@ img{
 .social-networks img {
     width: 40px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
+    margin: 0 50px; /* Add margin to create space between the logos */
+}
+
+.social-networks .hooligaan-logo {
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add margin to create space between the logos */
 }
