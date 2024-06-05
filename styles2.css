@@ -22,6 +22,8 @@ body {
     font-weight: 900;
     text-align: center;
     text-decoration: underline; /* Add underline to the text */
+    text-shadow: 0 0 10px rgba(123, 132, 184, 0.8); /* Add a glowing effect directly to the text */
+
 }
 
 .logo img {
