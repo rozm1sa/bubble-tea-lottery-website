@@ -60,10 +60,6 @@ body {
     text-shadow: 0 0 10px rgba(123, 132, 184, 0.8); /* Add a glowing effect directly to the text */
 }
 
-.intro::after {
-    content: " laimē!"; /* Append "laimē!" to the end of the text */
-    color: #7b84b8; /* Set color of "laimē!" to light purple */
-}
 
 
 
@@ -319,8 +315,10 @@ img{
 .img-item:hover{
     opacity: 0.8;
 }
-.product-content{
-    padding: 2rem 1rem;
+.product-content {
+    flex: 1;
+    padding: 20px;
+    word-wrap: break-word; /* This will force long words to break */
 }
 .product-title{
     font-size: 2.5rem;
@@ -362,10 +360,13 @@ img{
     padding: 0.3rem;
     opacity: 0.8;
 }
-.product-detail ul{
-    font-size: 0.9rem;
-    margin: 20px 0; /* Increased margin for spacing */
-    text-align: left; /* Align list items to the left */
+
+.product-detail ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-right: 20px;
+    overflow-wrap: break-word; /* Add this to ensure long words break and stay within the container */
+    text-align: left;
 }
 
 .product-detail ul li span{
@@ -380,6 +381,7 @@ img{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1.5rem;
+        flex-direction: column;
     }
     .card-wrapper{
         height: 100vh;
@@ -394,6 +396,7 @@ img{
     }
     .product-content{
         padding-top: 0;
+        padding: 10px;
     }
 }
 /* Center content within the prize section on smaller screens */
@@ -606,7 +609,7 @@ img{
 }
 
 .logo img {
-    max-width: 300px; /* Adjust as needed */
+    max-width: 300px; /* Adjust as neededF */
     height: auto;
 }
 
