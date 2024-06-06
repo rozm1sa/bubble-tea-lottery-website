@@ -373,7 +373,11 @@ img{
     font-weight: 400;
 }
 
-
+.number{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
 
 
 @media screen and (min-width: 992px){
