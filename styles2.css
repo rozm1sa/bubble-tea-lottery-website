@@ -61,6 +61,50 @@ body {
 }
 
 
+/* Dynamic text styles */
+.dynamic-text {
+    text-align: center;
+    margin: 30px 0;
+    background-color: rgba(35, 31, 32, 0.8); /* Brown color with 80% opacity */
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: auto; /* Center the form container */
+    margin-right: auto; /* Center the form container */
+}
+
+.dynamic-text .wow {
+    font-size: 3rem;
+    color: #7b84b8;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-weight: bold;
+}
+
+.dynamic-text .highlight {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.dynamic-text .description {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.dynamic-text .description.underline {
+    text-decoration: underline;
+}
+
+.dynamic-text .slogan {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-weight: bold;
+}
 
 
 form label {
